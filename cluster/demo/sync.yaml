@@ -20,11 +20,11 @@ metadata:
   name: oci-podinfo
   namespace: flux-system
 spec:
-  interval: 1m0s
+  interval: 30s
   path: ./
   prune: true
   sourceRef:
     kind: OCIRepository
     name: nekia-qiita-oci-podinfo-main
-  targetNamespace: default
+  targetNamespace: flux-system
 
