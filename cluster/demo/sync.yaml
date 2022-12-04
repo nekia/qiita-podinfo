@@ -3,7 +3,7 @@ apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: OCIRepository
 metadata:
   name: nekia-qiita-oci-podinfo-main
-  namespace: flux-system
+  namespace: default
 spec:
   interval: 30s
   provider: generic
@@ -18,7 +18,7 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
   name: oci-podinfo
-  namespace: flux-system
+  namespace: default
 spec:
   interval: 1m0s
   path: ./cluster/demo
